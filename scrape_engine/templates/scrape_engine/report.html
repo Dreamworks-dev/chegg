@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'scrape_engine/index/custom.css' %}">
+    <title>Chegg</title>
+</head>
+<body>
+    <div class='search-other'>
+        <a href='{% url "scrape_engine:index" %}'>Search Other Answers</a>
+    </div>
+
+    <div class="message error">
+        <img src='{% static "scrape_engine/image/error.png" %}' width="50" height="50">
+        <h2>Unexpected Error</h2>
+        <p>
+            Unexpected Error has occured during scraping.
+            Please report the problem to the developing team. 
+        </p>
+    </div>
+</body>
+</html>

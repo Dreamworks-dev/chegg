@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.search-other {
+    text-align: center;
+    margin-top: 45px;
+}
+
+a {
+    background: linear-gradient(225deg,#0691ff,#04cd70 85%);
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    font-weight: 100;
+    border-radius: 5px;
+    border: 1px solid #55b7ff;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.message.error {
+    border: 2px solid #e7e7e7;
+    border-left: 5px solid #2abdff;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+    background-color: white;
+}
+
+.message {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ababab;
+    border-radius: 10px;
+    margin: 24px auto;
+    box-shadow: 2px 2px 8px #afafaf;
+    display: block;
+    max-width: 550px;
+}
+
+.message p, .message li {
+    font-size: 18px;
+    text-align: left;
+}

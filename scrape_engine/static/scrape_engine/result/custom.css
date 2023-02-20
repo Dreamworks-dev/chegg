@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.search-other {
+    text-align: center;
+    margin-top: 45px;
+}
+
+a {
+    background: linear-gradient(225deg,#0691ff,#04cd70 85%);
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    font-weight: 100;
+    border-radius: 5px;
+    border: 1px solid #55b7ff;
+    margin: 20px auto;
+    text-decoration: none;
+}

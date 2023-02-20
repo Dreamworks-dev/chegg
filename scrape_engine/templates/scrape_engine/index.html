@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Chegg</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="shortcut icon" href="{% static 'scrape_engine/images/logo.png' %}" type="image/x-icon">
+     <link rel="stylesheet" href="{% static 'scrape_engine/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'scrape_engine/css/vegas.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'scrape_engine/css/templatemo-style.css' %}">
+     <link rel="stylesheet" href="{% static 'scrape_engine/index/custom.css' %}">
+</head>
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+     <!-- HOME -->
+     <section id="home">
+        <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="home-info">
+                              <h2>
+                                   The only tool that you need for Study Smarter at No Cost!
+                              </h2>
+                              <p>
+                                   Just enter direct Link to the question and get an answer instantly. With our Q&A solutions Search engine, you can also search your question to find similar step by step homework problems & solutions to your question.
+                              </p>
+                              <!-- You can change the date time in init.js file -->
+                              <div class="subscribe-form">
+                                <form action="{% url 'scrape_engine:result' %}" method="post">
+                                   {% csrf_token %}
+                                   <input type="text", name="scraping_url", placeholder="Paste your Question Link here...">
+                                   <button>Submit</button>
+                                </form>
+                              </div>
+
+                              {% if not is_check %}
+                                    <div class="message error">
+                                      <img src='{% static "scrape_engine/image/error.png" %}' width="50" height="50">
+                                      <h2>Unsupported Question type!</h2>
+                                      <p><strong>Query:</strong></p>
+                                      <ul>
+                                          <li>{{ link }}</li>
+                                      </ul>
+                                      <p><strong>Error details:</strong></p>
+                                      <ul>
+                                          <li>We don't support links from this site yet.</li>
+                                      </ul>
+                                    </div>
+                              {% endif %} 
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+</body>
+    <!-- SCRIPTS -->
+    <script src="{% static 'scrape_engine/js/jquery.js' %}"></script>
+    <script src="{% static 'scrape_engine/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'scrape_engine/js/vegas.min.js' %}"></script>
+    <script src="{% static 'scrape_engine/js/countdown.js' %}"></script>
+    <script src="{% static 'scrape_engine/js/init.js' %}"></script>
+    <script src="{% static 'scrape_engine/js/custom.js' %}"></script>
+</html>

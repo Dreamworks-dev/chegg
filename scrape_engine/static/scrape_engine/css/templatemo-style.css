@@ -1,0 +1,270 @@
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #303030;
+  }
+
+  body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+    line-height: inherit;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+  h2 {
+    color: #000000;
+  }
+
+  p {
+    color: #000000;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+
+
+  /*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+  html{
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #202020;
+    text-decoration: none !important;
+  }
+
+  a,
+  input, button,
+  .form-control {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  a:hover, a:active, a:focus {
+    color: #29ca8e;
+    outline: none;
+  }
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #202020;
+  }
+
+  .overlay {
+    background-color: #ffffff;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  form {
+    max-width: 40em;
+    display: flex;
+    margin: auto;
+    border: 3px solid #8ad6b8;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    }
+
+  input[type=text] {
+      width: 100%;
+      height: 50px;
+      padding: 0 15px;
+      border: 0;
+      font-size: 100%;
+      margin: 0;
+      outline: none;
+  }
+
+  button {
+      background: #1cc691;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 0 22px;
+      color: #fff;
+      height: 50px;
+  }
+
+  .subscribe-form {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+
+  /*---------------------------------------
+       PRE LOADER              
+  -----------------------------------------*/
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+  }
+
+  .spinner {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 1px solid #575757;
+    border-top-color: #ffffff;
+    animation: spinner .9s linear infinite;
+  }
+
+  @-webkit-@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+
+  /*---------------------------------------
+      HOME          
+  -----------------------------------------*/
+
+  #home {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  #home .container {
+    width: 100%;
+  }
+
+  .home-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 150px
+  }
+
+  .home-info h2 {
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  .home-info p {
+    font-size: 18px;
+  }
+  
+  .countdown {
+    text-align: center;
+    margin: 50px 0;
+    padding: 0;
+  }
+
+  .countdown li {
+    color: #ffffff;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .countdown span {
+    font-size: 25px;
+  }
+
+  .countdown h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+
+
+
+  /*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+  @media screen and (max-width: 480px) {
+
+    .home-info {
+      padding: 0 1em 0 1em;
+    }
+
+    .countdown li {
+      margin: 0 12px;
+    }
+
+  }
+
+  @media screen and (max-width: 360px) {
+
+    h1 {
+      font-size: 1.50em;
+    }
+
+    .countdown span {
+      font-size: 20px;
+    }
+
+    .countdown h3 {
+      font-size: 12px;
+    }
+  }
