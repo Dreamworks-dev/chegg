@@ -1,11 +1,7 @@
 import json
 import requests
-import urllib.parse
 from bs4 import BeautifulSoup
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 from django.shortcuts import render
-from django.shortcuts import redirect
 
 from utils.check_link import checkLink
 
