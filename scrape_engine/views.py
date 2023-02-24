@@ -135,7 +135,7 @@ def result(request):
         end_block = '{% endblock %}'
         html = f'{extends}{start_block}{str(soup)}{end_block}'
 
-        text_file = open("scrape_engine\\templates\\scrape_engine\\result.html", "w", encoding='utf-8')
+        text_file = open("scrape_engine/templates/scrape_engine/result.html", "w", encoding='utf-8')
         text_file.write(str(html))
         text_file.close()
 
